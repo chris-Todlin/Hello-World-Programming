@@ -1,0 +1,59 @@
+/* Make sure to center the body that it is in te center of the application
+    or the window so as to center is 
+*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    block-size: 100vh;
+}
+
+.container {
+    background: linear-gradient(90deg, #bb8014, #fa6819);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 2px 4px 5px rgba(0,0,0,0.3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: floralwhite;
+    font-size: 1.3em;
+    width: 60%;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* The form of the tip */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Form input of the tip */
+
+input {
+    padding: 0.4rem;
+    font-size: 1.1rem;
+    border-radius: 0.3rem;
+}
+
+/* The button of the calculator */
+form > button {
+    background: linear-gradient(45deg, green, lawngreen);
+    font-size: inherit;
+    padding: 0.3rem;
+    border-radius: 0.4rem;
+}
+
+/* Section to recieve the output, have a bleachmon */
+
+.result {
+    background-color: blanchedalmond;
+    color: black;
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+    margin-top: 0.5rem;
+}

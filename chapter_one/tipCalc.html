@@ -1,0 +1,94 @@
+<!-- This is the application behind the starting of the tkinter application -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tip Calculator</h1>
+        </header>
+        <main>
+            <section class="calcContainer">
+                <!-- The form to house the caclulator -->
+                <form action="/" name="tip_form" class="tipForm">
+                    <label for="bill Amount">Bill Amount: </label>
+                    <input type="number" name="bill_amount" id="bill_amount" min="1" required>
+
+                    <!-- Tip percantage container of input -->
+                    <label for="Tip Percentage">Tip Percentage: </label>
+                    <input type="number" name="tip_percentage" id="tip_percentage" required>
+
+                    <!-- Button to calculate the bill -->
+                    <button type="submit">Calculate tip</button>
+                </form>
+            </section>
+
+            <section class="result" id="result">
+                <!-- This is the section to return the result of the tip -->
+            </section>
+        </main>
+
+        <!-- The script to handle the backward part of the game -->
+        <script>
+            (function(){
+                // Create and get the form to get the values of the form
+                const tipForm = document.forms.tip_form; // the tip form
+                const resultEl = document.getElementById("result");
+
+                // function to calculate the tip
+                function calculateTip(bill, percent){
+                    return bill * percent / 100;
+                }
+
+                // function to append the body of the result
+                function appendResults(amount, tip){
+
+                    resultEl.innerHTML = `
+                        <p>
+                            <em>Tip : </em><span id="tip">$${tip}</span>
+                        </p>
+                        <p><em>Total Bill : </em><span id="total_bill">$${amount}</span></p>
+                    `; // done its work
+                }
+
+                // function to get the result printed out
+                function displayOutput(){
+                    try{
+                        // convert them to numbers
+                        const bill = parseInt(tipForm.bill_amount.value);
+                        const tipPercent = parseInt(tipForm.tip_percentage.value);
+
+                        // if the amount is less than 0 throw an new error
+                        if(tipPercent< 0) {
+                            throw new Error("Bill cannot be less than 0");
+                        }
+
+                        // get the contaienr of the result and print the results out
+                        const tip = calculateTip(bill, tipPercent);
+
+                        appendResults(bill + tip, tip); // append the body
+
+                        // clear the input 
+                        tipForm.bill_amount.value = "";
+                        tipForm.tip_percentage.value = "";
+                    }catch(e){
+                        alert(e); // inform the user the error
+                    }
+                }
+
+                // now get the form and attach the submit eventlistenr
+                tipForm.addEventListener('submit',e=>{
+                    e.preventDefault(); // prevent the noraml submission of the form
+
+                    displayOutput(); // run this function
+                })
+            })();
+        </script>
+    </div>
+</body>
+</html>
