@@ -16,15 +16,21 @@ Projects are grouped by folder:
 
 ### Files
 - `3n_plus_one/solution1.js`
+- `3n_plus_one/final_solution.js`
+- `3n_plus_one/solution.py`
 
 ### Description
-A JavaScript script that computes and prints the Collatz sequence for a given starting number. It displays each value and the total iteration count until the sequence reaches `1`.
+- `solution1.js`: a JavaScript module that computes the Collatz (3n + 1) cycle length for a given number.
+- `final_solution.js`: a JavaScript runner that imports `solution1.js`, evaluates ranges of values, and prints the maximum cycle length for each interval.
+- `solution.py`: a Python implementation that prints the Collatz sequence for a given number and reports the total step count until `1`.
 
 ### Run
-Requires Node.js.
+Requires Node.js or Python 3.
 
 ```bash
 node 3n_plus_one/solution1.js
+node 3n_plus_one/final_solution.js
+python 3n_plus_one/solution.py
 ```
 
 ---

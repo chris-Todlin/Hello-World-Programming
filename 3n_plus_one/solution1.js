@@ -12,10 +12,10 @@
 function sequence_3n_1(n){
     // this variable is to keep account of the number of times the loop has runned
     let count = 0;
-    console.log("\nTrial start with the sequence 3n + 1 program");
+    //console.log("\nTrial start with the sequence 3n + 1 program");
     // start the loop 
     while(n > 0){ // While n not equals to one and not less than 0, then we are in the loop
-        console.log(n); // print the n
+        //console.log(n); // print the n
         count++;
 
         // including the version where if n = 1, terminate due to output
@@ -30,8 +30,12 @@ function sequence_3n_1(n){
         }
     }
 
-    console.log("It took %d iteration for the 3n + 1 challange", count);
+    //console.log("It took %d iteration for the 3n + 1 challange", count);
+    return count; // return the number of iterations
 }
 
 // trial case with 22
 sequence_3n_1(22);
+
+// Export the solution to the other file 
+module.exports.sequence_3n_1 = sequence_3n_1;
