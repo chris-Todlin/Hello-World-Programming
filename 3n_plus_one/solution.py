@@ -19,11 +19,11 @@ def sequence_3n_1(n):
     numberInputted = n
     
     # inform the start of the sequence
-    print("\nTrial start with the sequence 3n + 1")
+    # print("\nTrial start with the sequence 3n + 1")
     
     # start the loop 
     while n > 0:
-        print(n, end=" ") # print the sequence 
+        # print(n, end=" ") # print the sequence 
         stepsTaken += 1 # add the count
         
         # now the process begins
@@ -40,7 +40,10 @@ def sequence_3n_1(n):
             n = 3*n + 1
 
     # the last good bye in the function 
-    print("\nIt took " + str(stepsTaken) + " steps to reach 1 from  the number(inputted) " + str(numberInputted))
+    # print("\nIt took " + str(stepsTaken) + " steps to reach 1 from  the number(inputted) " + str(numberInputted))
+    
+    # treturn the number of steps taken 
+    return stepsTaken
     
 
 # giving it a test drive 
