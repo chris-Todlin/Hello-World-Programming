@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            margin-right: 10px;
+        }
+        input {
+            padding: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+
+    <!-- Adding the form to get the name of the user -->
+    <form action="/">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name">
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Button to trigger the prompt -->
+    <button onclick="sayHello2()">Say Hello</button>
+</body>
+
+<!-- Adding the js file to handle the form -->
+<script>
+    const helloForm = document.forms[0];
+
+    // function to say hello to the user
+    function sayHello2(){
+        const name = prompt("What is your name?")
+        // alert the user
+        alert(`Hello, ${name}, nice to meet you!`);
+    }
+
+    // submit function 
+    function sayHello(e){
+        e.preventDefault();
+        const name = helloForm.name.value;
+
+        // alert the user
+        alert(`Hello, ${name}, nice to meet you!`);
+    }
+
+    // attach the submit event 
+    helloForm.addEventListener('submit', sayHello);
+</script>
+</html>
