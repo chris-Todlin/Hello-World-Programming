@@ -8,7 +8,9 @@ Projects are grouped by folder:
 
 - `3n_plus_one/` — JavaScript implementation of the Collatz (3n + 1) sequence.
 - `chapter_one/` — Python console and GUI apps, plus a browser-based tip calculator.
+- `chapter_two/` — Python console programs for string processing and user input handling.
 - `Tkinter_touchy/chapter_one/` — Tkinter practice examples building simple interactive windows.
+- `Tkinter_touchy/chapter_two/` — Python class system fundamentals and object-oriented programming.
 
 ---
 
@@ -63,7 +65,27 @@ To use the browser app, open `chapter_one/tipCalc.html` in a web browser.
 
 ---
 
-## 3. Tkinter_touchy/chapter_one
+## 3. chapter_two
+
+### Files
+- `chapter_two/hello_world.py` — greeting program with user name input.
+- `chapter_two/number_character.py` — string character counter program.
+
+### Descriptions
+- `hello_world.py`: a program that prompts the user for their name and displays a personalized greeting. Includes variations with default values and string handling.
+- `number_character.py`: a program that counts and displays the number of characters in a user-entered string with error handling.
+
+### Run
+Requires Python 3.
+
+```bash
+python chapter_two/hello_world.py
+python chapter_two/number_character.py
+```
+
+---
+
+## 4. Tkinter_touchy/chapter_one
 
 ### Files
 - `Tkinter_touchy/chapter_one/hello_world.py`
@@ -82,6 +104,23 @@ Requires Python 3.
 python Tkinter_touchy/chapter_one/hello_world.py
 python Tkinter_touchy/chapter_one/hello_tkinter.py
 python Tkinter_touchy/chapter_one/fix_hello.py
+```
+
+---
+
+## 5. Tkinter_touchy/chapter_two
+
+### Files
+- `Tkinter_touchy/chapter_two/class_in_py.py`
+
+### Descriptions
+- `class_in_py.py`: an introduction to Python classes and object-oriented programming. Demonstrates class definition, instance initialization with `__init__`, instance variables, and methods.
+
+### Run
+Requires Python 3.
+
+```bash
+python Tkinter_touchy/chapter_two/class_in_py.py
 ```
 
 ---
